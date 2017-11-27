@@ -35,4 +35,8 @@ dependencies {
 
     // Use MySQL Connector-J
     compile 'mysql:mysql-connector-java'
+
+    compile("org.hibernate:hibernate-validator")
+
+
 }

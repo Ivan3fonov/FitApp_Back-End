@@ -5,10 +5,13 @@ import org.springframework.boot.context.config.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import hello.User;
 import hello.UserRepository;
+
+import javax.validation.Valid;
 
 @RestController
 
@@ -17,7 +20,12 @@ public class MainController {
     private UserRepository userRepository;
 
     @PostMapping(path="/users")
-    public ResponseEntity<User> addNewUser (@RequestBody User user) {
+    public ResponseEntity<User> addNewUser (@Valid @RequestBody User user, BindingResult result) {
+        if(result.hasErrors()) {
+            //
+            //??
+           // return result.getAllErrors();
+        }
         if (user != null) {
             user = new User(user.getName(), user.getEmail(), user.getPassword());
             userRepository.save(user);
@@ -25,15 +33,6 @@ public class MainController {
         return new ResponseEntity<User>(user, HttpStatus.OK);
     }
 
-    @PostMapping(path="/test")
-    public ResponseEntity addUser (@RequestParam String name,
-                                   @RequestParam String email,
-                                   @RequestParam String password) {
-        User user = new User(name, email, password);
-        userRepository.save(user);
-
-        return new ResponseEntity<User>(user, HttpStatus.OK);
-    }
 
     @GetMapping(path="/users")
     public  Iterable<User> getAllUsers() {
