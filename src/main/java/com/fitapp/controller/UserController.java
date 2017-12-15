@@ -1,15 +1,12 @@
 package com.fitapp.controller;
 
 import com.fitapp.model.User;
-import com.fitapp.service.PasswordService;
 import com.fitapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-
 import javax.validation.Valid;
 
 @RestController
@@ -19,17 +16,13 @@ public class  UserController {
 
 
     @PostMapping(path="/users")
-    public ResponseEntity<User> addNewUser (@Valid @RequestBody User user, BindingResult result) {
-        if(result.hasErrors()) {
-            //<
-            //??
-           // return result.getAllErrors();
-        }
-        if (user != null) {
+    public ResponseEntity<User> addNewUser (@Valid @RequestBody User user) {
+
+        //if (user != null) {
 
             //user = new User(user.getName(), user.getEmail(),passwordService.encodePassword(user.getPassword()));
             userService.saveUser(user);
-        }
+        //}
         return new ResponseEntity<User>(user, HttpStatus.OK);
     }
 

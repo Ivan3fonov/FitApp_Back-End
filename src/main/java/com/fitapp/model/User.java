@@ -1,10 +1,12 @@
 package com.fitapp.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import org.apache.commons.text.RandomStringGenerator;
 import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotEmpty;
+import static org.apache.commons.text.CharacterPredicates.DIGITS;
+import static org.apache.commons.text.CharacterPredicates.LETTERS;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -33,7 +35,7 @@ public class User {
     @Size(min = 8)
     private String password;
 
-    //private String token;
+    private String token;
 
     public User (String name, String email, String password) {
         this.name = name;
@@ -65,14 +67,25 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-   // @JsonIgnore
+
     public String getPassword() {
         return password;
     }
-   // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+
     public void setPassword(String password) {
         this.password = password;
     }
 
 
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken() {
+        RandomStringGenerator generator = new RandomStringGenerator.Builder()
+                .withinRange('0', 'z')
+                .filteredBy(LETTERS, DIGITS)
+                .build();
+        this.token = String.valueOf(generator);
+    }
 }
