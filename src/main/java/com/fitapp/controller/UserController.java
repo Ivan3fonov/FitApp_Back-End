@@ -1,11 +1,12 @@
 package com.fitapp.controller;
 
+import com.fitapp.model.Measurements;
 import com.fitapp.model.User;
+import com.fitapp.repository.MeasurementsRepository;
 import com.fitapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
@@ -13,6 +14,8 @@ import javax.validation.Valid;
 public class  UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private MeasurementsRepository measurementsRepository;
 
 
     @PostMapping(path="/users")
@@ -61,7 +64,7 @@ public class  UserController {
 
 
     }
-    @DeleteMapping(path="/users/{id}")
+    @DeleteMapping(path = "/users/{id}")
     public void deleteUser(@PathVariable Integer id ) {
         if (id != null) {
             if(userService.ifUserIdExist(id)) {
@@ -69,5 +72,13 @@ public class  UserController {
             }
         }
     }
+
+    @PostMapping(path = "/users/{id}/measurements")
+    public ResponseEntity<Measurements> addUserMeasurements (@PathVariable Integer id,@RequestBody Measurements measurements) {
+        userService.addUserMeasurements(measurements,id);
+
+        return new ResponseEntity<Measurements>(measurements,HttpStatus.OK);
+    }
+
 
 }

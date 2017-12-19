@@ -5,18 +5,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import org.apache.commons.text.RandomStringGenerator;
 import org.hibernate.validator.constraints.Email;
+
 import static org.apache.commons.text.CharacterPredicates.DIGITS;
 import static org.apache.commons.text.CharacterPredicates.LETTERS;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class User {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id")
     private Integer id;
 
     @NotNull
@@ -29,7 +32,6 @@ public class User {
     private String email;
 
 
-
     @NotNull
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Size(min = 8)
@@ -37,12 +39,27 @@ public class User {
 
     private String token;
 
-    public User (String name, String email, String password) {
+    private String gender;
+    private int height;
+    private int weight;
+
+
+    @OneToMany(fetch = FetchType.EAGER,mappedBy="user",cascade = CascadeType.ALL)
+    private List<Measurements> measurements;
+
+    public User(String name, String email, String password, String gender, int height, int weight) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.gender = gender;
+        this.height = height;
+        this.weight = weight;
     }
-    public User(){};
+
+    public User() {
+
+    }
+
 
     public Integer getId() {
         return id;
@@ -87,5 +104,37 @@ public class User {
                 .filteredBy(LETTERS, DIGITS)
                 .build();
         this.token = String.valueOf(generator);
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public List<Measurements> getMeasurements() {
+        return measurements;
+    }
+
+    public void setMeasurements(List<Measurements> measurements) {
+        this.measurements = measurements;
     }
 }
