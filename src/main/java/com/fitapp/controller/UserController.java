@@ -1,7 +1,7 @@
 package com.fitapp.controller;
 
+import com.fitapp.model.AppUser;
 import com.fitapp.model.Measurements;
-import com.fitapp.model.User;
 import com.fitapp.repository.MeasurementsRepository;
 import com.fitapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,19 +19,19 @@ public class  UserController {
 
 
     @PostMapping(path="/users")
-    public ResponseEntity<User> addNewUser (@Valid @RequestBody User user) {
+    public ResponseEntity<AppUser> addNewUser (@Valid @RequestBody AppUser user) {
 
         //if (user != null) {
 
-            //user = new User(user.getName(), user.getEmail(),passwordService.encodePassword(user.getPassword()));
+            //user = new AppUser(user.getName(), user.getEmail(),passwordService.encodePassword(user.getPassword()));
             userService.saveUser(user);
         //}
-        return new ResponseEntity<User>(user, HttpStatus.OK);
+        return new ResponseEntity<AppUser>(user, HttpStatus.OK);
     }
 
 
     @GetMapping(path="/users")
-    public  Iterable<User> getAllUsers() {
+    public  Iterable<AppUser> getAllUsers() {
 
         return userService.findAllUsers();
     }
@@ -39,7 +39,7 @@ public class  UserController {
     @GetMapping(path="/users/{id}")
     public ResponseEntity getUser(@PathVariable Integer id) {
         if(userService.ifUserIdExist(id)) {
-            User user = userService.findById(id);
+            AppUser user = userService.findById(id);
 
             return ResponseEntity.ok(user);
         }
@@ -49,18 +49,18 @@ public class  UserController {
 
 
     @PutMapping(path="/users/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Integer id, @RequestBody User user){
-        User currtUser = userService.findById(id);
+    public ResponseEntity<AppUser> updateUser(@PathVariable Integer id, @RequestBody AppUser user){
+        AppUser currtUser = userService.findById(id);
 
         if(currtUser == null) {
-            return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<AppUser>(HttpStatus.NOT_FOUND);
         }
 
         currtUser.setEmail(user.getEmail());
         currtUser.setPassword(user.getPassword());
         userService.saveUser(currtUser);
 
-        return new ResponseEntity<User>(currtUser, HttpStatus.OK);
+        return new ResponseEntity<AppUser>(currtUser, HttpStatus.OK);
 
 
     }
@@ -79,6 +79,7 @@ public class  UserController {
 
         return new ResponseEntity<Measurements>(measurements,HttpStatus.OK);
     }
+
 
 
 }

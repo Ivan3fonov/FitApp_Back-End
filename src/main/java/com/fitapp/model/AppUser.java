@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class User {
+public class AppUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -47,7 +47,7 @@ public class User {
     @OneToMany(fetch = FetchType.EAGER,mappedBy="user",cascade = CascadeType.ALL)
     private List<Measurements> measurements;
 
-    public User(String name, String email, String password, String gender, int height, int weight) {
+    public AppUser(String name, String email, String password, String gender, int height, int weight) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -56,7 +56,7 @@ public class User {
         this.weight = weight;
     }
 
-    public User() {
+    public AppUser() {
 
     }
 

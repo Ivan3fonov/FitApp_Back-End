@@ -20,7 +20,7 @@ public class Measurements {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    private AppUser user;
 
 
     Measurements() {
@@ -83,11 +83,11 @@ public class Measurements {
         this.calf = calf;
     }
 
-    public User getUser() {
+    public AppUser getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(AppUser user) {
         this.user = user;
     }
 }

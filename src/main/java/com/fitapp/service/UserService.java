@@ -1,7 +1,7 @@
 package com.fitapp.service;
 
+import com.fitapp.model.AppUser;
 import com.fitapp.model.Measurements;
-import com.fitapp.model.User;
 import com.fitapp.repository.MeasurementsRepository;
 import com.fitapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,18 +20,13 @@ public class UserService {
     @Autowired
     private MeasurementsRepository measurementsRepository;
 
-   public User saveUser (User user) {
-       user.setName(user.getName());
-       user.setEmail(user.getEmail());
+   public AppUser saveUser (AppUser user) {
        user.setPassword(passwordService.encodePassword(user.getPassword()));
-       user.setGender(user.getName());
-       user.setHeight(user.getHeight());
-       user.setWeight(user.getWeight());
 
        return userRepository.save(user);
    }
 
-   public List<User> findAllUsers() {
+   public List<AppUser> findAllUsers() {
        return userRepository.findAll();
    }
 
@@ -39,7 +34,7 @@ public class UserService {
        return userRepository.exists(id);
    }
 
-   public User findById(Integer id) {
+   public AppUser findById(Integer id) {
        return userRepository.findOne(id);
    }
 
@@ -53,7 +48,7 @@ public class UserService {
    public Measurements addUserMeasurements(Measurements measurements,int id){
 
 
-       User user = userRepository.findOne(id);
+       AppUser user = userRepository.findOne(id);
 
        measurements.setUser(user);
 
