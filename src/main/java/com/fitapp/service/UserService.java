@@ -61,4 +61,23 @@ public class UserService {
 
    }
 
+   public int calculateCalories(int id) {
+
+       AppUser user = userRepository.findOne(id);
+
+       int calories = 0;
+
+       if(user.getGender() == "female") {
+           calories = (int)(10 * user.getWeight() + 6.25 * user.getHeight() - 5 * user.getAge() - 161);
+           calories *= user.getActivity();
+       } else {
+           calories = (int)(10 * user.getWeight() + 6.25 * user.getHeight() - 5 * user.getAge() + 5);
+           calories *= user.getActivity();
+       }
+        return calories;
+
+       //for females = 10 x (Weight in kg) + 6.25 x (Height in cm) - 5 x age - 161;
+       // for males= 10 x (Weight in kg) + 6.25 x (Height in cm) - 5 x age + 5
+   }
+
 }

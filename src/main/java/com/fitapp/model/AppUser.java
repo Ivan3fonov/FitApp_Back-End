@@ -42,6 +42,8 @@ public class AppUser {
     private String gender;
     private int height;
     private int weight;
+    private int age;
+    private float activity;
 
 
     @OneToMany(fetch = FetchType.EAGER,mappedBy="user",cascade = CascadeType.ALL)
@@ -136,5 +138,21 @@ public class AppUser {
 
     public void setMeasurements(List<Measurements> measurements) {
         this.measurements = measurements;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public float getActivity() {
+        return activity;
+    }
+
+    public void setActivity(float activity) {
+        this.activity = activity;
     }
 }

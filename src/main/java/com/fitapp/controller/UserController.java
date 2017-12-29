@@ -80,6 +80,10 @@ public class  UserController {
         return new ResponseEntity<Measurements>(measurements,HttpStatus.OK);
     }
 
+    @GetMapping(path = "users/{id}/calories")
+    public int getCalories(@PathVariable Integer id) {
+        return userService.calculateCalories(id);
+    }
 
 
 }
