@@ -45,6 +45,9 @@ public class AppUser {
     private int age;
     private float activity;
 
+    private String role;
+
+
 
     @OneToMany(fetch = FetchType.EAGER,mappedBy="user",cascade = CascadeType.ALL)
     private List<Measurements> measurements;
@@ -154,5 +157,13 @@ public class AppUser {
 
     public void setActivity(float activity) {
         this.activity = activity;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

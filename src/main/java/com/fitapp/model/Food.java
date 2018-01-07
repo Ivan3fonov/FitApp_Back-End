@@ -1,15 +1,23 @@
 package com.fitapp.model;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Food {
-    int proteins;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "food_id")
+    private Integer id;
+
+    private int proteins;
     int fats;
     int carbs;
     int amount;
 
-    Food() {}
+    Food() {
+
+    }
 
     public int getProteins() {
         return proteins;
@@ -41,5 +49,13 @@ public class Food {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
