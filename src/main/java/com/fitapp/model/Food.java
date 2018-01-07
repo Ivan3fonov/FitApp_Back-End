@@ -10,13 +10,23 @@ public class Food {
     @Column(name = "food_id")
     private Integer id;
 
+    private String name;
     private int proteins;
-    int fats;
-    int carbs;
-    int amount;
+    private int fats;
+    private int carbs;
+    private int amount;
+    private int calories;
 
     Food() {
 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getProteins() {
@@ -57,5 +67,14 @@ public class Food {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public void setCalories(int calories) {
+        this.calories = calories;
     }
 }
