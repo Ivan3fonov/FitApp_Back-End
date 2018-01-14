@@ -1,8 +1,8 @@
 package com.fitapp.service;
 
 import com.fitapp.model.AppUser;
-import com.fitapp.model.Measurements;
-import com.fitapp.repository.MeasurementsRepository;
+import com.fitapp.model.Measurement;
+import com.fitapp.repository.MeasurementRepository;
 import com.fitapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,7 +18,7 @@ public class UserService {
     private PasswordService passwordService;
 
     @Autowired
-    private MeasurementsRepository measurementsRepository;
+    private MeasurementRepository measurementRepository;
 
    public AppUser saveUser (AppUser user) {
        user.setPassword(passwordService.encodePassword(user.getPassword()));
@@ -45,18 +45,18 @@ public class UserService {
        userRepository.deleteAll();
    }
 
-   public Measurements addUserMeasurements(Measurements measurements,int id){
+   public Measurement addUserMeasurements(Measurement measurement, int id){
 
 
        AppUser user = userRepository.findOne(id);
 
-       measurements.setUser(user);
+       measurement.setUser(user);
 
-       user.getMeasurements().add(measurements);
+       user.getMeasurements().add(measurement);
 
        userRepository.save(user);
 
-       return measurementsRepository.save(measurements);
+       return measurementRepository.save(measurement);
 
 
    }

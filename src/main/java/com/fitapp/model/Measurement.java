@@ -1,10 +1,11 @@
 package com.fitapp.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 
 @Entity
-public class Measurements {
+public class Measurement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,12 +19,14 @@ public class Measurements {
     private float thigh;
     private float calf;
 
+    private Date createdAt;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private AppUser user;
 
 
-    Measurements() {
+    Measurement() {
 
     }
 
@@ -89,5 +92,13 @@ public class Measurements {
 
     public void setUser(AppUser user) {
         this.user = user;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 }

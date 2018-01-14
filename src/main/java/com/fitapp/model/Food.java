@@ -14,8 +14,12 @@ public class Food {
     private int proteins;
     private int fats;
     private int carbs;
-    private int amount;
-    private int calories;
+    private float calsPerUnit;
+    private int unit;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "meal_id", nullable = false)
+    private Meal meal;
 
     Food() {
 
@@ -53,13 +57,7 @@ public class Food {
         this.carbs = carbs;
     }
 
-    public int getAmount() {
-        return amount;
-    }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
 
     public Integer getId() {
         return id;
@@ -70,11 +68,29 @@ public class Food {
     }
 
 
-    public int getCalories() {
-        return calories;
+
+
+    public Meal getMeal() {
+        return meal;
     }
 
-    public void setCalories(int calories) {
-        this.calories = calories;
+    public void setMeal(Meal meal) {
+        this.meal = meal;
+    }
+
+    public float getCalsPerUnit() {
+        return calsPerUnit;
+    }
+
+    public void setCalsPerUnit(float calsPerUnit) {
+        this.calsPerUnit = calsPerUnit;
+    }
+
+    public int getUnit() {
+        return unit;
+    }
+
+    public void setUnit(int unit) {
+        this.unit = unit;
     }
 }

@@ -44,13 +44,18 @@ public class AppUser {
     private int weight;
     private int age;
     private float activity;
+    private String goal;
+    private int calories;
 
-    private String role;
+    //private String role;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "diet_id", nullable = false)
+    private Diet diet;
 
 
     @OneToMany(fetch = FetchType.EAGER,mappedBy="user",cascade = CascadeType.ALL)
-    private List<Measurements> measurements;
+    private List<Measurement> measurements;
 
     public AppUser(String name, String email, String password, String gender, int height, int weight) {
         this.name = name;
@@ -135,11 +140,11 @@ public class AppUser {
         this.weight = weight;
     }
 
-    public List<Measurements> getMeasurements() {
+    public List<Measurement> getMeasurements() {
         return measurements;
     }
 
-    public void setMeasurements(List<Measurements> measurements) {
+    public void setMeasurements(List<Measurement> measurements) {
         this.measurements = measurements;
     }
 
@@ -159,11 +164,36 @@ public class AppUser {
         this.activity = activity;
     }
 
-    public String getRole() {
-        return role;
+    public String getGoal() {
+        return goal;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setGoal(String goal) {
+        this.goal = goal;
     }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public void setCalories(int calories) {
+        this.calories = calories;
+    }
+
+    public Diet getDiet() {
+        return diet;
+    }
+
+    public void setDiet(Diet diet) {
+        this.diet = diet;
+    }
+
+
+//    public String getRole() {
+//        return role;
+//    }
+//
+//    public void setRole(String role) {
+//        this.role = role;
+//    }
 }

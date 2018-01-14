@@ -1,8 +1,8 @@
 package com.fitapp.controller;
 
 import com.fitapp.model.AppUser;
-import com.fitapp.model.Measurements;
-import com.fitapp.repository.MeasurementsRepository;
+import com.fitapp.model.Measurement;
+import com.fitapp.repository.MeasurementRepository;
 import com.fitapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,10 +15,10 @@ public class  UserController {
     @Autowired
     private UserService userService;
     @Autowired
-    private MeasurementsRepository measurementsRepository;
+    private MeasurementRepository measurementRepository;
 
 
-    @PostMapping(path="/users")
+    @PostMapping(path="/users/sign-up")
     public ResponseEntity<AppUser> addNewUser (@Valid @RequestBody AppUser user) {
 
         //if (user != null) {
@@ -74,10 +74,10 @@ public class  UserController {
     }
 
     @PostMapping(path = "/users/{id}/measurements")
-    public ResponseEntity<Measurements> addUserMeasurements (@PathVariable Integer id,@RequestBody Measurements measurements) {
-        userService.addUserMeasurements(measurements,id);
+    public ResponseEntity<Measurement> addUserMeasurements (@PathVariable Integer id, @RequestBody Measurement measurement) {
+        userService.addUserMeasurements(measurement,id);
 
-        return new ResponseEntity<Measurements>(measurements,HttpStatus.OK);
+        return new ResponseEntity<Measurement>(measurement,HttpStatus.OK);
     }
 
     @GetMapping(path = "users/{id}/calories")
