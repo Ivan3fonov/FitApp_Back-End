@@ -18,6 +18,10 @@ public class Meal {
 
     private int calTarget;
 
+    private int calsFromProteins;
+    private int calsFromCarbs;
+    private int calsFromFats;
+
     @OneToMany(fetch = FetchType.EAGER,mappedBy="meal",cascade = CascadeType.ALL)
     private List<Food> food;
 
@@ -68,5 +72,29 @@ public class Meal {
 
     public void setCalTarget(int calTarget) {
         this.calTarget = calTarget;
+    }
+
+    public int getCalsFromProteins() {
+        return calsFromProteins;
+    }
+
+    public void setCalsFromProteins(int calsFromProteins) {
+        this.calsFromProteins = calsFromProteins;
+    }
+
+    public int getCalsFromCarbs() {
+        return calsFromCarbs;
+    }
+
+    public void setCalsFromCarbs(int calsFromCarbs) {
+        this.calsFromCarbs = calsFromCarbs;
+    }
+
+    public int getCalsFromFats() {
+        return calsFromFats;
+    }
+
+    public void setCalsFromFats(int calsFromFats) {
+        this.calsFromFats = calsFromFats;
     }
 }

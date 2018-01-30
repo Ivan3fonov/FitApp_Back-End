@@ -17,6 +17,10 @@ public class Food {
     private float calsPerUnit;
     private int unit;
 
+    private int amount;
+
+    private String predominatMacros;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "meal_id", nullable = false)
     private Meal meal;
@@ -57,8 +61,6 @@ public class Food {
         this.carbs = carbs;
     }
 
-
-
     public Integer getId() {
         return id;
     }
@@ -66,9 +68,6 @@ public class Food {
     public void setId(Integer id) {
         this.id = id;
     }
-
-
-
 
     public Meal getMeal() {
         return meal;
@@ -92,5 +91,21 @@ public class Food {
 
     public void setUnit(int unit) {
         this.unit = unit;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public String getPredominatMacros() {
+        return predominatMacros;
+    }
+
+    public void setPredominatMacros(String predominatMacros) {
+        this.predominatMacros = predominatMacros;
     }
 }

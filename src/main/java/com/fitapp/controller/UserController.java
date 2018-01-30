@@ -1,8 +1,11 @@
 package com.fitapp.controller;
 
 import com.fitapp.model.AppUser;
+import com.fitapp.model.Meal;
 import com.fitapp.model.Measurement;
 import com.fitapp.repository.MeasurementRepository;
+import com.fitapp.service.FoodService;
+import com.fitapp.service.MealService;
 import com.fitapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +18,9 @@ public class  UserController {
     @Autowired
     private UserService userService;
     @Autowired
-    private MeasurementRepository measurementRepository;
+    private MealService mealService;
+    @Autowired
+    private FoodService foodService;
 
 
     @PostMapping(path="/users/sign-up")
@@ -82,5 +87,14 @@ public class  UserController {
         return userService.calculateCalories(id);
     }
 
+    @PostMapping(path = "users/{id}/diets/meals/{mealId}")
+    public ResponseEntity<Meal> setUserCaloriesPerMeal (@PathVariable Integer id , @PathVariable Integer mealId) {
 
+        mealService.calculateCaloriesPerMeal(id,mealId);
+
+        foodService.calculateAmountofFood(mealId);
+
+        return new ResponseEntity<Meal>(mealService.findById(mealId),HttpStatus.OK);
+
+    }
 }

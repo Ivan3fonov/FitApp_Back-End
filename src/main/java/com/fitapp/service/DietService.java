@@ -1,9 +1,11 @@
 package com.fitapp.service;
 
+import com.fitapp.model.AppUser;
 import com.fitapp.model.Diet;
 import com.fitapp.model.Meal;
 import com.fitapp.repository.DietRepository;
 import com.fitapp.repository.MealRepository;
+import com.fitapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +18,8 @@ public class DietService {
     private DietRepository dietRepository;
     @Autowired
     private MealRepository mealRepository;
+    @Autowired
+    private UserRepository userRepository;
 
 
     public Diet saveDiet (Diet diet) {
@@ -44,5 +48,18 @@ public class DietService {
         return dietRepository.save(diet);
 
 
+    }
+
+    public Diet addDietUsers(int userId, int id) {
+
+        AppUser user = userRepository.findOne(userId);
+
+        Diet diet = dietRepository.findOne(id);
+
+        user.setDiet(diet);
+
+        diet.getUsers().add(user);
+
+        return dietRepository.save(diet);
     }
 }

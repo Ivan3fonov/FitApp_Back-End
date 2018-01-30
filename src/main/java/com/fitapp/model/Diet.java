@@ -18,7 +18,7 @@ public class Diet {
     @OneToMany(fetch = FetchType.EAGER,mappedBy="diet",cascade = CascadeType.ALL)
     private Set<Meal> meals;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy="diet",cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,mappedBy="diet",cascade = CascadeType.PERSIST)
     private Set<AppUser> users;
 
     Diet() {}

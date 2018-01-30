@@ -90,7 +90,9 @@ public class UserService {
         return roundCalories;
 
        //for females = 10 x (Weight in kg) + 6.25 x (Height in cm) - 5 x age - 161;
-       // for males= 10 x (Weight in kg) + 6.25 x (Height in cm) - 5 x age + 5
+       // for males= 10 x (Weight in kg) + 6.25 x (Height in cm) - 5 x age + 5;
+
    }
+
 
 }

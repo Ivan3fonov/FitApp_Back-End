@@ -48,7 +48,7 @@ public class AppUser {
     private int calories;
 
     //private String role;
-
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "diet_id" /*,nullable = false*/)
     private Diet diet;
