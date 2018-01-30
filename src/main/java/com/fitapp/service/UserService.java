@@ -45,7 +45,7 @@ public class UserService {
        userRepository.deleteAll();
    }
 
-   public Measurement addUserMeasurements(Measurement measurement, int id){
+   public AppUser addUserMeasurements(Measurement measurement, int id){
 
 
        AppUser user = userRepository.findOne(id);
@@ -54,9 +54,8 @@ public class UserService {
 
        user.getMeasurements().add(measurement);
 
-       userRepository.save(user);
+       return userRepository.save(user);
 
-       return measurementRepository.save(measurement);
 
 
    }
@@ -65,16 +64,30 @@ public class UserService {
 
        AppUser user = userRepository.findOne(id);
 
-       int calories = 0;
+       double calories = 0;
+
 
        if(user.getGender() == "female") {
-           calories = (int)(10 * user.getWeight() + 6.25 * user.getHeight() - 5 * user.getAge() - 161);
+           calories = 10 * user.getWeight() + 6.25 * user.getHeight() - 5 * user.getAge() - 161;
            calories *= user.getActivity();
        } else {
-           calories = (int)(10 * user.getWeight() + 6.25 * user.getHeight() - 5 * user.getAge() + 5);
+           calories = 10 * user.getWeight() + 6.25 * user.getHeight() - 5 * user.getAge() + 5;
            calories *= user.getActivity();
        }
-        return calories;
+
+       if(user.getGoal() == "bulk"){
+           calories = calories + (15 * calories) / 100;
+
+       } else if(user.getGoal() == "cut") {
+
+           calories = calories - (15 * calories) / 100 ;
+       }
+
+        int roundCalories = (int)calories;
+        user.setCalories(roundCalories);
+        userRepository.save(user);
+
+        return roundCalories;
 
        //for females = 10 x (Weight in kg) + 6.25 x (Height in cm) - 5 x age - 161;
        // for males= 10 x (Weight in kg) + 6.25 x (Height in cm) - 5 x age + 5

@@ -1,5 +1,7 @@
 package com.fitapp.model;
 
+import com.sun.istack.internal.Nullable;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class Meal {
     private List<Food> food;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "diet_id", nullable = false)
+    @JoinColumn(name = "diet_id"/*, nullable = false*/)
     private Diet diet;
 
     Meal() {

@@ -2,6 +2,7 @@ package com.fitapp.model;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Diet {
@@ -11,13 +12,14 @@ public class Diet {
     @Column(name = "diet_id")
     private Integer id;
 
+    @Column(name = "diet_name")
     private String name;
 
     @OneToMany(fetch = FetchType.EAGER,mappedBy="diet",cascade = CascadeType.ALL)
-    private List<Meal> meals;
+    private Set<Meal> meals;
 
     @OneToMany(fetch = FetchType.EAGER,mappedBy="diet",cascade = CascadeType.ALL)
-    private List<AppUser> users;
+    private Set<AppUser> users;
 
     Diet() {}
 
@@ -29,11 +31,11 @@ public class Diet {
         this.id = id;
     }
 
-    public List<Meal> getMeals() {
+    public Set<Meal> getMeals() {
         return meals;
     }
 
-    public void setMeals(List<Meal> meals) {
+    public void setMeals(Set<Meal> meals) {
         this.meals = meals;
     }
 
@@ -47,11 +49,11 @@ public class Diet {
     }
 
 
-    public List<AppUser> getUsers() {
+    public Set<AppUser> getUsers() {
         return users;
     }
 
-    public void setUsers(List<AppUser> users) {
+    public void setUsers(Set<AppUser> users) {
         this.users = users;
     }
 }

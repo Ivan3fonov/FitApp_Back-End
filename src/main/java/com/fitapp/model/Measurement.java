@@ -101,4 +101,12 @@ public class Measurement {
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

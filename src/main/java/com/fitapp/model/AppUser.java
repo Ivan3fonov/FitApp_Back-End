@@ -37,7 +37,7 @@ public class AppUser {
     @Size(min = 8)
     private String password;
 
-    private String token;
+    //private String token;
 
     private String gender;
     private int height;
@@ -50,10 +50,10 @@ public class AppUser {
     //private String role;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "diet_id", nullable = false)
+    @JoinColumn(name = "diet_id" /*,nullable = false*/)
     private Diet diet;
 
-
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(fetch = FetchType.EAGER,mappedBy="user",cascade = CascadeType.ALL)
     private List<Measurement> measurements;
 
@@ -104,17 +104,17 @@ public class AppUser {
     }
 
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken() {
-        RandomStringGenerator generator = new RandomStringGenerator.Builder()
-                .withinRange('0', 'z')
-                .filteredBy(LETTERS, DIGITS)
-                .build();
-        this.token = String.valueOf(generator);
-    }
+//    public String getToken() {
+//        return token;
+//    }
+//
+//    public void setToken() {
+//        RandomStringGenerator generator = new RandomStringGenerator.Builder()
+//                .withinRange('0', 'z')
+//                .filteredBy(LETTERS, DIGITS)
+//                .build();
+//        this.token = String.valueOf(generator);
+//    }
 
     public String getGender() {
         return gender;
@@ -185,7 +185,7 @@ public class AppUser {
     }
 
     public void setDiet(Diet diet) {
-        this.diet = diet;
+        this.diet = diet ;
     }
 
 

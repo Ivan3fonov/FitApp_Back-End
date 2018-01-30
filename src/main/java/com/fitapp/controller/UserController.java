@@ -20,12 +20,9 @@ public class  UserController {
 
     @PostMapping(path="/users/sign-up")
     public ResponseEntity<AppUser> addNewUser (@Valid @RequestBody AppUser user) {
+;
+        userService.saveUser(user);
 
-        //if (user != null) {
-
-            //user = new AppUser(user.getName(), user.getEmail(),passwordService.encodePassword(user.getPassword()));
-            userService.saveUser(user);
-        //}
         return new ResponseEntity<AppUser>(user, HttpStatus.OK);
     }
 
