@@ -10,6 +10,8 @@ import com.fitapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
@@ -25,7 +27,7 @@ public class  UserController {
 
     @PostMapping(path="/users/sign-up")
     public ResponseEntity<AppUser> addNewUser (@Valid @RequestBody AppUser user) {
-;
+
         userService.saveUser(user);
 
         return new ResponseEntity<AppUser>(user, HttpStatus.OK);
@@ -48,6 +50,17 @@ public class  UserController {
         return null;
     }
 
+    @GetMapping(path = "/getUserIdFromToken")
+    public Integer GetUserID() {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        AppUser user = userService.findUserByName(auth.getName());
+
+
+        return user.getId();
+    }
+
 
 
     @PutMapping(path="/users/{id}")
@@ -58,8 +71,7 @@ public class  UserController {
             return new ResponseEntity<AppUser>(HttpStatus.NOT_FOUND);
         }
 
-        currtUser.setEmail(user.getEmail());
-        currtUser.setPassword(user.getPassword());
+
         userService.saveUser(currtUser);
 
         return new ResponseEntity<AppUser>(currtUser, HttpStatus.OK);

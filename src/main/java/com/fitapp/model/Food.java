@@ -14,7 +14,7 @@ public class Food {
     private int proteins;
     private int fats;
     private int carbs;
-    private float calsPerUnit;
+    private double calsPerUnit;
     private int unit;
 
     private int amount;
@@ -25,8 +25,14 @@ public class Food {
     @JoinColumn(name = "meal_id", nullable = false)
     private Meal meal;
 
-    Food() {
+    public Food() {
 
+    }
+
+
+    public Food(String name , double calsPerUnit) {
+        this.name = name;
+        this.calsPerUnit = calsPerUnit;
     }
 
     public String getName() {
@@ -77,11 +83,11 @@ public class Food {
         this.meal = meal;
     }
 
-    public float getCalsPerUnit() {
+    public double getCalsPerUnit() {
         return calsPerUnit;
     }
 
-    public void setCalsPerUnit(float calsPerUnit) {
+    public void setCalsPerUnit(double calsPerUnit) {
         this.calsPerUnit = calsPerUnit;
     }
 

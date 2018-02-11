@@ -94,5 +94,9 @@ public class UserService {
 
    }
 
+   public AppUser findUserByName (String name) {
+       return userRepository.findByName(name);
+   }
+
 
 }

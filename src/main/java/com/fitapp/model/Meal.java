@@ -29,7 +29,7 @@ public class Meal {
     @JoinColumn(name = "diet_id"/*, nullable = false*/)
     private Diet diet;
 
-    Meal() {
+    public Meal() {
 
     }
 
