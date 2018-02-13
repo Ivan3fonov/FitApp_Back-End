@@ -21,7 +21,6 @@ public class UserService {
     private MeasurementRepository measurementRepository;
 
    public AppUser saveUser (AppUser user) {
-       user.setPassword(passwordService.encodePassword(user.getPassword()));
 
        return userRepository.save(user);
    }
@@ -41,6 +40,7 @@ public class UserService {
    public void deleteUserById(Integer id) {
        userRepository.delete(id);
    }
+
    public void deleteAllUsers(){
        userRepository.deleteAll();
    }

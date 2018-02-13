@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f86ef1a-14ae-4ee9-ad8e-a9eb2bc1d78d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/model/Food.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/model/Food.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/model/Meal.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/model/Meal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/service/DietService.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/service/DietService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/service/FoodService.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/service/FoodService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/service/ScheduledTasks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/config/Application.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/config/Application.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/controller/UserController.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/controller/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/config/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/config/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,9 +31,76 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="43" />
+            <state relative-caret-position="131">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScheduledTasks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/service/ScheduledTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JwtAuthenticationToken.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/JwtAuthenticationToken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Measurement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Measurement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/config/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+              <folding>
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#986#987#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Meal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,11 +108,11 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="96" column="32" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="32" />
+            <state relative-caret-position="306">
+              <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding>
-                <element signature="e#2464#2465#0" expanded="true" />
-                <element signature="e#2516#2517#0" expanded="true" />
+                <element signature="e#2388#2389#0" expanded="true" />
+                <element signature="e#2440#2441#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/UserDetailsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -406,7 +471,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/security/TokenAuthenticationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/security/JWTloginFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/security/JWTLoginFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/LoginUser.java" />
@@ -424,7 +488,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/PasswordService.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/config/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/JwtUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/repository/FoodRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/repository/DietRepository.java" />
@@ -452,11 +515,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/FoodService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/controller/DietController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/UserDetailsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/config/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/ScheduledTasks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java" />
       </list>
     </option>
   </component>
@@ -490,9 +555,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -525,6 +588,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fitapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RESTfull" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RESTfull" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fitapp" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RESTfull" type="b2602c69:ProjectViewProjectNode" />
@@ -588,7 +660,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -774,11 +848,12 @@
       <workItem from="1518279005064" duration="2054000" />
       <workItem from="1518290130251" duration="998000" />
       <workItem from="1518371910510" duration="1473000" />
+      <workItem from="1518544313954" duration="10604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234314000" />
+    <option name="totallyTimeSpent" value="244918000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -806,7 +881,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32848588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31907612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -848,13 +923,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.2.3.RELEASE/5c620ead93220cae89562bd3eda6ec875c43e1db/spring-security-core-4.2.3.RELEASE-sources.jar!/org/springframework/security/crypto/password/PasswordEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.6/4765e418c9084c4e01233cb5f09bdd6b5f311ccc/commons-lang3-3.6-sources.jar!/org/apache/commons/lang3/RandomStringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -951,13 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="51" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/config/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1097,21 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Measurement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1126,14 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Diet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1141,37 +1179,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/UserDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/config/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding>
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/JwtAuthenticationToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/UserDetailsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Measurement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="234">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/service/ScheduledTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="96" column="32" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="32" />
+        <state relative-caret-position="306">
+          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding>
-            <element signature="e#2464#2465#0" expanded="true" />
-            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2388#2389#0" expanded="true" />
+            <element signature="e#2440#2441#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="131">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

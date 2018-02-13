@@ -3,7 +3,6 @@ package com.fitapp.controller;
 import com.fitapp.model.AppUser;
 import com.fitapp.model.Meal;
 import com.fitapp.model.Measurement;
-import com.fitapp.repository.MeasurementRepository;
 import com.fitapp.service.FoodService;
 import com.fitapp.service.MealService;
 import com.fitapp.service.UserService;
@@ -51,7 +50,7 @@ public class  UserController {
     }
 
     @GetMapping(path = "/getUserIdFromToken")
-    public Integer GetUserID() {
+    public Integer getUserID() {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
@@ -60,7 +59,6 @@ public class  UserController {
 
         return user.getId();
     }
-
 
 
     @PutMapping(path="/users/{id}")

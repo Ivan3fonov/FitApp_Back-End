@@ -1,6 +1,5 @@
 package com.fitapp.model;
 
-import com.sun.istack.internal.Nullable;
 
 import javax.persistence.*;
 import java.util.List;
