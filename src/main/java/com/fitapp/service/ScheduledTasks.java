@@ -18,7 +18,7 @@
 //    private UserService userService;
 //
 //    @Async
-//    @Scheduled(fixedRate = 5000)
+//    @Scheduled(cron = "0 0 10 * * */THU")
 //    public void ChangeUsersCalories() {
 //
 //        for (AppUser user:userService.findAllUsers()) {
