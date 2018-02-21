@@ -30,9 +30,10 @@ public class Food {
     }
 
 
-    public Food(String name , double calsPerUnit) {
+    public Food(String name , double calsPerUnit, String predominatMacros) {
         this.name = name;
         this.calsPerUnit = calsPerUnit;
+        this.predominatMacros = predominatMacros;
     }
 
     public String getName() {

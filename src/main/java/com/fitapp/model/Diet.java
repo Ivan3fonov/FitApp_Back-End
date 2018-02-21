@@ -1,6 +1,7 @@
 package com.fitapp.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -21,7 +22,10 @@ public class Diet {
     @OneToMany(fetch = FetchType.EAGER,mappedBy="diet",cascade = CascadeType.PERSIST)
     private Set<AppUser> users;
 
-    Diet() {}
+    public Diet() {
+        this.meals = new HashSet<Meal>();
+        this.users = new HashSet<AppUser>();
+    }
 
     public Integer getId() {
         return id;

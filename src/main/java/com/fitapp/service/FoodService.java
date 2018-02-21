@@ -56,4 +56,27 @@ public class FoodService {
         foodRepository.save(foods);
     }
 
+    public void calculateAmountofFood1  (Meal meal) {
+
+        List<Food> foods =  meal.getFood();
+
+        for (Food food:foods) {
+
+            if(food.getPredominatMacros().equals("Proteins")) {
+                int foodAmount = (int)(meal.getCalsFromProteins() / food.getCalsPerUnit());
+                food.setAmount(foodAmount);
+
+            } else if (food.getPredominatMacros().equals("Carbs")) {
+                int foodAmount = (int)(meal.getCalsFromCarbs() / food.getCalsPerUnit());
+                food.setAmount(foodAmount);
+
+            } else {
+                int foodAmount = (int)(meal.getCalsFromFats() / food.getCalsPerUnit());
+                food.setAmount(foodAmount);
+            }
+        }
+
+       // foodRepository.save(foods);
+    }
+
 }

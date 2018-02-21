@@ -45,10 +45,11 @@ public class AppUser {
     private int age;
     private float activity;
     private String goal;
+
     private int calories;
 
     //private String role;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "diet_id" /*,nullable = false*/)
     private Diet diet;

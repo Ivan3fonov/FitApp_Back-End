@@ -1,11 +1,10 @@
 package com.fitapp.controller;
 
 import com.fitapp.model.AppUser;
+import com.fitapp.model.Diet;
 import com.fitapp.model.Meal;
 import com.fitapp.model.Measurement;
-import com.fitapp.service.FoodService;
-import com.fitapp.service.MealService;
-import com.fitapp.service.UserService;
+import com.fitapp.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,11 +21,19 @@ public class  UserController {
     private MealService mealService;
     @Autowired
     private FoodService foodService;
+    @Autowired
+    private PasswordService passwordService;
+    @Autowired
+    private DietService dietService;
 
 
     @PostMapping(path="/users/sign-up")
     public ResponseEntity<AppUser> addNewUser (@Valid @RequestBody AppUser user) {
 
+        user.setPassword(passwordService.encodePassword(user.getPassword()));
+        user.setCalories(userService.calculateCalories(user));
+//        user.setDiet(dietService.saveDiet(user.getDiet(),user));
+        dietService.saveDiet(new Diet(), user);
         userService.saveUser(user);
 
         return new ResponseEntity<AppUser>(user, HttpStatus.OK);
@@ -92,19 +99,19 @@ public class  UserController {
         return new ResponseEntity<Measurement>(measurement,HttpStatus.OK);
     }
 
-    @GetMapping(path = "users/{id}/calories")
-    public int getCalories(@PathVariable Integer id) {
-        return userService.calculateCalories(id);
-    }
+//    @GetMapping(path = "users/{id}/calories")
+//    public int getCalories(@PathVariable Integer id) {
+//        return userService.calculateCalories(id);
+//    }
 
-    @PostMapping(path = "users/{id}/diets/meals/{mealId}")
-    public ResponseEntity<Meal> setUserCaloriesPerMeal (@PathVariable Integer id , @PathVariable Integer mealId) {
+//    @PostMapping(path = "users/{id}/diets/meals/{mealId}")
+//    public ResponseEntity<Meal> setUserCaloriesPerMeal (@PathVariable Integer id , @PathVariable Integer mealId) {
+//
+//        mealService.calculateCaloriesPerMeal(id,mealId);
+//
+//        foodService.calculateAmountofFood(mealId);
+//
+//        return new ResponseEntity<Meal>(mealService.findById(mealId),HttpStatus.OK);
 
-        mealService.calculateCaloriesPerMeal(id,mealId);
-
-        foodService.calculateAmountofFood(mealId);
-
-        return new ResponseEntity<Meal>(mealService.findById(mealId),HttpStatus.OK);
-
-    }
+   // }
 }

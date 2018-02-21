@@ -31,13 +31,13 @@ public class DietController {
 
 
 
-    @PostMapping()
-    public ResponseEntity<Diet> createDiet(@Valid @RequestBody Diet diet) {
-
-        dietService.saveDiet(diet);
-
-        return new ResponseEntity<>(diet, HttpStatus.OK);
-    }
+//    @PostMapping()
+//    public ResponseEntity<Diet> createDiet(@Valid @RequestBody Diet diet) {
+//
+//        dietService.saveDiet(diet);
+//
+//        return new ResponseEntity<>(diet, HttpStatus.OK);
+//    }
 
     @GetMapping()
     public Iterable<Diet> getAllDiets() {
@@ -67,22 +67,22 @@ public class DietController {
         return new ResponseEntity<Food>(food,HttpStatus.OK);
     }
 
-    @PostMapping(path = "/{id}/meals")
-    public ResponseEntity<Meal> addDietMeal (@PathVariable Integer id, @RequestBody Meal meal) {
+//    @PostMapping(path = "/{id}/meals")
+//    public ResponseEntity<Meal> addDietMeal (@PathVariable Integer id, @RequestBody Meal meal) {
+//
+//        dietService.addDietMeals(meal,id);
+//
+//        return new ResponseEntity<Meal>(meal,HttpStatus.OK);
+//    }
 
-        dietService.addDietMeals(meal,id);
-
-        return new ResponseEntity<Meal>(meal,HttpStatus.OK);
-    }
-
-    @PostMapping(path = "/{id}/users/{userId}")
-    public ResponseEntity<AppUser> addDietUser(@PathVariable Integer id, @PathVariable Integer userId) {
-
-        dietService.addDietUsers(userId,id);
-        AppUser user = userService.findById(userId);
-
-        return new ResponseEntity<AppUser>(user, HttpStatus.OK);
-    }
+//    @PostMapping(path = "/{id}/users/{userId}")
+//    public ResponseEntity<AppUser> addDietUser(@PathVariable Integer id, @PathVariable Integer userId) {
+//
+//        dietService.addDietUsers(userId,id);
+//        AppUser user = userService.findById(userId);
+//
+//        return new ResponseEntity<AppUser>(user, HttpStatus.OK);
+//    }
 
     @DeleteMapping(path="/foods")
     public void deleteFood() {

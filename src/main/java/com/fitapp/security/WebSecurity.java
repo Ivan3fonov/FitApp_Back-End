@@ -41,6 +41,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
                 .antMatchers(HttpMethod.POST, SIGN_UP_URL ).permitAll()
                 .antMatchers("/diets/**").permitAll()
+                .antMatchers("/send/**").permitAll()
 
                 .anyRequest().authenticated()
 

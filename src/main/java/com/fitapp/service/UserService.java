@@ -54,15 +54,16 @@ public class UserService {
 
        user.getMeasurements().add(measurement);
 
-       return userRepository.save(user);
+       userRepository.save(user);
+
+       return user;
 
 
 
    }
 
-   public int calculateCalories(int id) {
+   public int calculateCalories(AppUser user) {
 
-       AppUser user = userRepository.findOne(id);
 
        double calories = 0;
 

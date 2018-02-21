@@ -48,15 +48,14 @@ public class MealService {
 
     }
 
-    public void calculateCaloriesPerMeal(int id, int mealId) {
+    public void calculateCaloriesPerMeal(AppUser user, Meal meal) {
 
-        int mealCalories = (int)(userService.findById(id).getCalories() * 0.33);
+        int mealCalories = (int)( user.getCalories()* 0.33);
 
-        Meal meal = mealRepository.findOne(mealId);
 
         meal.setCalTarget(mealCalories);
 
-        int proteinsCals = (int)(userService.findById(id).getWeight() * 1.8 * 4 * 0.33 );
+        int proteinsCals = (int)(user.getWeight() * 1.8 * 4 * 0.33 );
         meal.setCalsFromProteins(proteinsCals);
 
         int fatsCals =(int)(mealCalories * 0.3);
@@ -65,8 +64,10 @@ public class MealService {
         int carbsCals = mealCalories - (fatsCals + proteinsCals);
         meal.setCalsFromCarbs(carbsCals);
 
-        mealRepository.save(meal);
+        //mealRepository.save(meal);
 
 
     }
+
+
 }
