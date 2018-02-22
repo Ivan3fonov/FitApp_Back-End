@@ -1,9 +1,6 @@
 package com.fitapp.controller;
 
-import com.fitapp.model.AppUser;
-import com.fitapp.model.Diet;
-import com.fitapp.model.Meal;
-import com.fitapp.model.Measurement;
+import com.fitapp.model.*;
 import com.fitapp.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +9,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -117,11 +116,37 @@ public class  UserController {
    // }
 
     @GetMapping(path = "users/{id}/diets")
-    public  Iterable<Meal> getUserDiet (@PathVariable Integer id) {
+    public  Iterable<Food> getUserDiet (@PathVariable Integer id) {
         AppUser user = userService.findById(id);
 
-        return user.getDiet().getMeals();
+         Set<Meal> meals = user.getDiet().getMeals();
 
 
+         List<Food> foods = new ArrayList<>();
+
+        while(true) {
+            for (Meal meal : meals) {
+                if (meal.getName().equals("meal1") && foods.size() == 0) {
+
+                    foods.addAll(meal.getFood());
+
+                } else if (meal.getName().equals("meal2") && foods.size() == 3) {
+
+                    foods.addAll(meal.getFood());
+
+                } else if (meal.getName().equals("meal3") && foods.size() == 6) {
+
+                    foods.addAll(meal.getFood());
+                }
+
+
+            }
+
+            if(foods.size() == 9) {
+                break;
+            }
+        }
+
+        return foods;
     }
 }

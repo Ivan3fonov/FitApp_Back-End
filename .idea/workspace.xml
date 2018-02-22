@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f86ef1a-14ae-4ee9-ad8e-a9eb2bc1d78d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/controller/UserController.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/model/AppUser.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/model/AppUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/repository/UserRepository.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/repository/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/com/fitapp/service/UserService.class" afterPath="$PROJECT_DIR$/out/production/classes/com/fitapp/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Diet.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/model/Diet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -41,54 +33,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="DietService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+            <state relative-caret-position="226">
+              <caret line="124" column="38" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+            <state relative-caret-position="288">
+              <caret line="142" column="13" lean-forward="true" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="163" column="34" lean-forward="false" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Meal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Food.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -96,28 +56,8 @@
       <file leaf-file-name="Diet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Diet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Measurement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Measurement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduledTasks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/service/ScheduledTasks.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+            <state relative-caret-position="320">
+              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -508,15 +448,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/security/WebSecurity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/MealService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/controller/DietController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/Diet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/Meal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/model/Diet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -526,7 +466,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="47" />
     <option name="width" value="1193" />
@@ -852,12 +792,12 @@
       <workItem from="1519132044053" duration="15099000" />
       <workItem from="1519228363627" duration="197000" />
       <workItem from="1519297348517" duration="3232000" />
-      <workItem from="1519316354417" duration="2277000" />
+      <workItem from="1519316354417" duration="13825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282185000" />
+    <option name="totallyTimeSpent" value="293733000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -869,8 +809,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="47" width="1303" height="780" extended-state="7" />
-    <editor active="true" />
+    <frame x="65" y="47" width="1303" height="780" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -881,12 +820,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6687403" sideWeight="0.50278884" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36547434" sideWeight="0.49721116" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36547434" sideWeight="0.49721116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32659408" sideWeight="0.49721116" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3250996" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32350597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1204,14 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Measurement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1261,18 +1192,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Diet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/controller/DietController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="163" column="34" lean-forward="false" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1287,26 +1218,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Food.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/service/DietService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+        <state relative-caret-position="226">
+          <caret line="124" column="38" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/AppUser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/model/Diet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="163" column="34" lean-forward="false" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="34" />
+        <state relative-caret-position="320">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fitapp/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="142" column="13" lean-forward="true" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
           <folding />
         </state>
       </provider>

@@ -2,6 +2,7 @@ package com.fitapp.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -23,8 +24,8 @@ public class Diet {
     private Set<AppUser> users;
 
     public Diet() {
-        this.meals = new HashSet<Meal>();
-        this.users = new HashSet<AppUser>();
+        this.meals = new LinkedHashSet<>();
+        this.users = new LinkedHashSet<>();
     }
 
     public Integer getId() {

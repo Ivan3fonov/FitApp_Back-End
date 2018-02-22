@@ -93,7 +93,7 @@ public class DietService {
 
 
 
-        Set<Meal> meals = new HashSet<Meal>();
+        Set<Meal> meals = new LinkedHashSet<>();
 
         meals.add(meal1);
         meals.add(meal2);
