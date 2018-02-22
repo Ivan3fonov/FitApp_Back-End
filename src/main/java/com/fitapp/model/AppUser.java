@@ -43,13 +43,13 @@ public class AppUser {
     private int height;
     private int weight;
     private int age;
-    private float activity;
+    private double activity;
     private String goal;
 
     private int calories;
 
     //private String role;
-    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "diet_id" /*,nullable = false*/)
     private Diet diet;
@@ -157,11 +157,11 @@ public class AppUser {
         this.age = age;
     }
 
-    public float getActivity() {
+    public double getActivity() {
         return activity;
     }
 
-    public void setActivity(float activity) {
+    public void setActivity(double activity) {
         this.activity = activity;
     }
 

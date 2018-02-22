@@ -12,6 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
+import java.util.Set;
 
 @RestController
 public class  UserController {
@@ -114,4 +115,13 @@ public class  UserController {
 //        return new ResponseEntity<Meal>(mealService.findById(mealId),HttpStatus.OK);
 
    // }
+
+    @GetMapping(path = "users/{id}/diets")
+    public  Iterable<Meal> getUserDiet (@PathVariable Integer id) {
+        AppUser user = userService.findById(id);
+
+        return user.getDiet().getMeals();
+
+
+    }
 }

@@ -99,5 +99,8 @@ public class UserService {
        return userRepository.findByName(name);
    }
 
+   public AppUser findUserByDiet (int id) {
 
+       return userRepository.findByDiet(id);
+   }
 }

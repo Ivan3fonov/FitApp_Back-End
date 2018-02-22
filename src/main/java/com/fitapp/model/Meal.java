@@ -1,6 +1,8 @@
 package com.fitapp.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -24,6 +26,7 @@ public class Meal {
     @OneToMany(fetch = FetchType.EAGER,mappedBy="meal",cascade = CascadeType.ALL)
     private List<Food> food;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "diet_id"/*, nullable = false*/)
     private Diet diet;
