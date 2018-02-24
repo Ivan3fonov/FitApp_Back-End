@@ -17,10 +17,11 @@ public class Diet {
     @Column(name = "diet_name")
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy="diet",cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy="diet", cascade = CascadeType.ALL)
+    @OrderBy("id ASC")
     private Set<Meal> meals;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy="diet",cascade = CascadeType.PERSIST)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy="diet", cascade = CascadeType.PERSIST)
     private Set<AppUser> users;
 
     public Diet() {

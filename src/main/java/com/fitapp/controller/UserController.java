@@ -36,6 +36,7 @@ public class  UserController {
         dietService.saveDiet(new Diet(), user);
         userService.saveUser(user);
 
+
         return new ResponseEntity<AppUser>(user, HttpStatus.OK);
     }
 
@@ -121,31 +122,40 @@ public class  UserController {
 
          Set<Meal> meals = user.getDiet().getMeals();
 
+        List<Food> foods = new ArrayList<>();
 
-         List<Food> foods = new ArrayList<>();
-
-        while(true) {
-            for (Meal meal : meals) {
-                if (meal.getName().equals("meal1") && foods.size() == 0) {
-
-                    foods.addAll(meal.getFood());
-
-                } else if (meal.getName().equals("meal2") && foods.size() == 3) {
-
-                    foods.addAll(meal.getFood());
-
-                } else if (meal.getName().equals("meal3") && foods.size() == 6) {
-
-                    foods.addAll(meal.getFood());
-                }
-
-
-            }
-
-            if(foods.size() == 9) {
-                break;
-            }
+        for (Meal meal:meals) {
+             foods.addAll(meal.getFoods());
         }
+
+//
+//        for (Meal meal: meals) {
+//             System.out.println(meal.getFoods().size());
+//
+//        }
+
+//        while(true) {
+//            for (Meal meal : meals) {
+//                if (meal.getName().equals("meal1") && foods.size() == 0) {
+//
+//                    foods.addAll(meal.getFood());
+//
+//                } else if (meal.getName().equals("meal2") && foods.size() == 3) {
+//
+//                    foods.addAll(meal.getFood());
+//
+//                } else if (meal.getName().equals("meal3") && foods.size() == 6) {
+//
+//                    foods.addAll(meal.getFood());
+//                }
+//
+//
+//            }
+//
+//            if(foods.size() == 9) {
+//                break;
+//            }
+//        }
 
         return foods;
     }

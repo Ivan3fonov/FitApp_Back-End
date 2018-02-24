@@ -42,7 +42,7 @@ public class MealService {
 
         food.setMeal(meal);
 
-        meal.getFood().add(food);
+        meal.getFoods().add(food);
 
         return  mealRepository.save(meal);
 

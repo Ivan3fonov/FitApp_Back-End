@@ -53,7 +53,7 @@ public class DietService {
             food.setMeal(meal1);
         }
 
-        meal1.setFood(foodList1);
+        meal1.setFoods(foodList1);
         foodService.calculateAmountofFood1(meal1);
 
 
@@ -71,7 +71,7 @@ public class DietService {
             food.setMeal(meal2);
         }
 
-        meal2.setFood(foodList2);
+        meal2.setFoods(foodList2);
         foodService.calculateAmountofFood1(meal2);
 
 
@@ -88,7 +88,7 @@ public class DietService {
             food.setMeal(meal3);
         }
 
-        meal3.setFood(foodList3);
+        meal3.setFoods(foodList3);
         foodService.calculateAmountofFood1(meal3);
 
 
@@ -100,11 +100,12 @@ public class DietService {
         meals.add(meal3);
 
 
-        addDietMeals(meals,diet);
+        addDietMeals(meals, diet);
 
        // dietRepository.save(diet);
 
         addDietUsers(user, diet);
+
 
     }
 
@@ -142,4 +143,5 @@ public class DietService {
 
         return dietRepository.save(diet);
     }
+
 }

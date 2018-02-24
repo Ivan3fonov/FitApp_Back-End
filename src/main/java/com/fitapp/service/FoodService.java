@@ -35,7 +35,7 @@ public class FoodService {
 
     public void calculateAmountofFood  ( int  mealId) {
 
-     List<Food> foods = mealRepository.findOne(mealId).getFood();
+     List<Food> foods = mealRepository.findOne(mealId).getFoods();
 
         for (Food food:foods) {
 
@@ -58,7 +58,7 @@ public class FoodService {
 
     public void calculateAmountofFood1  (Meal meal) {
 
-        List<Food> foods =  meal.getFood();
+        List<Food> foods =  meal.getFoods();
 
         for (Food food:foods) {
 
