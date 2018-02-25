@@ -42,9 +42,9 @@ public class DietService {
 
         List<Food> foodList1 = new ArrayList<>(
                 Arrays.asList(
-                        new Food("spagetti1", 3.7,"Carbs"),
-                        new Food("pork neck1", 1.86,"Proteins"),
-                        new Food ("olive oil1",8.86,"Fats")
+                        new Food("spagetti", 3.7,"Carbs"),
+                        new Food("pork neck", 1.86,"Proteins"),
+                        new Food ("olive oil",8.86,"Fats")
 
                 ));
 
@@ -60,9 +60,9 @@ public class DietService {
 
         List<Food> foodList2 = new ArrayList<>(
                 Arrays.asList(
-                        new Food("oats1", 3.02,"Carbs"),
-                        new Food("cottage cheese1", 1.11,"Proteins"),
-                        new Food ("butter1",7.16,"Fats")
+                        new Food("oats", 3.02,"Carbs"),
+                        new Food("cottage cheese", 1.11,"Proteins"),
+                        new Food ("butter",7.16,"Fats")
 
                 ));
 
@@ -77,9 +77,9 @@ public class DietService {
 
         List<Food> foodList3 = new ArrayList<>(
                 Arrays.asList(
-                        new Food("rice1", 3.65, "Carbs"),
-                        new Food("chicken breast1", 1.64, "Proteins"),
-                        new Food ("almonds1",5.75,"Fats")
+                        new Food("rice", 3.65, "Carbs"),
+                        new Food("chicken breast", 1.64, "Proteins"),
+                        new Food ("almonds",5.75,"Fats")
 
                 ));
 
@@ -98,6 +98,60 @@ public class DietService {
         meals.add(meal1);
         meals.add(meal2);
         meals.add(meal3);
+
+
+        if(user.getMeals() == 4 || user.getMeals() == 5 ) {
+
+            Meal meal4 = new Meal();
+            meal4.setName("meal4");
+            mealService.calculateCaloriesPerMeal(user,meal4);
+
+            List<Food> foodList4 = new ArrayList<>(
+                    Arrays.asList(
+                            new Food("banana", 0.81, "Carbs"),
+                            new Food("whey protein",3.89, "Proteins"),
+                            new Food ("milk",0.61,"Fats")
+
+                    ));
+
+            for (Food food:foodList4) {
+
+                food.setMeal(meal4);
+            }
+
+            meal4.setFoods(foodList4);
+            foodService.calculateAmountofFood1(meal4);
+
+            meals.add(meal4);
+        }
+
+        if(user.getMeals() == 5) {
+
+            Meal meal5 = new Meal();
+            meal5.setName("meal5");
+            mealService.calculateCaloriesPerMeal(user,meal5);
+
+            List<Food> foodList5 = new ArrayList<>(
+                    Arrays.asList(
+                            new Food("wholegrain bread", 2.5, "Carbs"),
+                            new Food("eggs-Lsize",74, "Proteins"),
+                            new Food ("avocado",1.6,"Fats")
+
+                    ));
+
+            for (Food food:foodList5) {
+
+                food.setMeal(meal5);
+            }
+
+            meal5.setFoods(foodList5);
+            foodService.calculateAmountofFood1(meal5);
+
+            meals.add(meal5);
+
+        }
+
+
 
 
         addDietMeals(meals, diet);

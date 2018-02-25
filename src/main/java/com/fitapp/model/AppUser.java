@@ -48,7 +48,8 @@ public class AppUser {
 
     private int calories;
 
-    //private String role;
+    private int meals;
+
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "diet_id" /*,nullable = false*/)
@@ -103,19 +104,6 @@ public class AppUser {
     public void setPassword(String password) {
         this.password = password;
     }
-
-
-//    public String getToken() {
-//        return token;
-//    }
-//
-//    public void setToken() {
-//        RandomStringGenerator generator = new RandomStringGenerator.Builder()
-//                .withinRange('0', 'z')
-//                .filteredBy(LETTERS, DIGITS)
-//                .build();
-//        this.token = String.valueOf(generator);
-//    }
 
     public String getGender() {
         return gender;
@@ -189,12 +177,11 @@ public class AppUser {
         this.diet = diet ;
     }
 
+    public int getMeals() {
+        return meals;
+    }
 
-//    public String getRole() {
-//        return role;
-//    }
-//
-//    public void setRole(String role) {
-//        this.role = role;
-//    }
+    public void setMeals(int meals) {
+        this.meals = meals;
+    }
 }

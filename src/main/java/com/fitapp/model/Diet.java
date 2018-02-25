@@ -21,7 +21,7 @@ public class Diet {
     @OrderBy("id ASC")
     private Set<Meal> meals;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy="diet", cascade = CascadeType.PERSIST)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy="diet", cascade = CascadeType.ALL)
     private Set<AppUser> users;
 
     public Diet() {

@@ -32,7 +32,6 @@ public class  UserController {
 
         user.setPassword(passwordService.encodePassword(user.getPassword()));
         user.setCalories(userService.calculateCalories(user));
-//        user.setDiet(dietService.saveDiet(user.getDiet(),user));
         dietService.saveDiet(new Diet(), user);
         userService.saveUser(user);
 
@@ -58,14 +57,14 @@ public class  UserController {
     }
 
     @GetMapping(path = "/getUserIdFromToken")
-    public Integer getUserID() {
+    public ResponseEntity getUserID() {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         AppUser user = userService.findUserByName(auth.getName());
 
 
-        return user.getId();
+        return ResponseEntity.ok(user);
     }
 
 

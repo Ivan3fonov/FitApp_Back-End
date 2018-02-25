@@ -68,7 +68,7 @@ public class UserService {
        double calories = 0;
 
 
-       if(user.getGender() == "female") {
+       if(user.getGender().equals("female")) {
            calories = 10 * user.getWeight() + 6.25 * user.getHeight() - 5 * user.getAge() - 161;
            calories *= user.getActivity();
        } else {
@@ -76,10 +76,10 @@ public class UserService {
            calories *= user.getActivity();
        }
 
-       if(user.getGoal() == "bulk"){
+       if(user.getGoal().equals("bulk")){
            calories = calories + (15 * calories) / 100;
 
-       } else if(user.getGoal() == "cut") {
+       } else if(user.getGoal().equals("cut")) {
 
            calories = calories - (15 * calories) / 100 ;
        }
@@ -99,9 +99,6 @@ public class UserService {
        return userRepository.findByName(name);
    }
 
-   public AppUser findUserByDiet (int id) {
 
-       return userRepository.findByDiet(id);
-   }
 
 }
