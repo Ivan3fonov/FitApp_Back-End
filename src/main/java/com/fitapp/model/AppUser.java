@@ -51,8 +51,7 @@ public class AppUser {
     private int meals;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "diet_id" /*,nullable = false*/)
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "user")
     private Diet diet;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)

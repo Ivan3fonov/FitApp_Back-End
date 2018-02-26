@@ -37,7 +37,7 @@
 //    @Autowired
 //    private AndroidPushNotificationsService androidPushNotificationsService;
 //
-//
+
 //    @Async
 //    @Scheduled(cron = "15 * * * * *")
 //    public void send() throws JSONException {
@@ -125,6 +125,7 @@
 //                } else {
 //
 //                    if(kilogramDiff < -0.01) {
+//
 //
 //                        user.setCalories(user.getCalories() + (user.getCalories()*10)/100);
 //

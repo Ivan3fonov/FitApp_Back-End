@@ -185,7 +185,7 @@ public class DietService {
 
     }
 
-    public Diet addDietUsers(AppUser user, Diet diet) {
+    public void addDietUsers(AppUser user, Diet diet) {
 
         //AppUser user = userRepository.findOne(userId);
 
@@ -193,9 +193,8 @@ public class DietService {
 
         user.setDiet(diet);
 
-        diet.getUsers().add(user);
+        diet.setUser(user);
 
-        return dietRepository.save(diet);
     }
 
 }

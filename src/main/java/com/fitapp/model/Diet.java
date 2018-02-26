@@ -21,12 +21,12 @@ public class Diet {
     @OrderBy("id ASC")
     private Set<Meal> meals;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy="diet", cascade = CascadeType.ALL)
-    private Set<AppUser> users;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id",nullable = false)
+    private AppUser user;
 
     public Diet() {
         this.meals = new LinkedHashSet<>();
-        this.users = new LinkedHashSet<>();
     }
 
     public Integer getId() {
@@ -54,12 +54,11 @@ public class Diet {
         this.name = name;
     }
 
-
-    public Set<AppUser> getUsers() {
-        return users;
+    public AppUser getUser() {
+        return user;
     }
 
-    public void setUsers(Set<AppUser> users) {
-        this.users = users;
+    public void setUser(AppUser user) {
+        this.user = user;
     }
 }
