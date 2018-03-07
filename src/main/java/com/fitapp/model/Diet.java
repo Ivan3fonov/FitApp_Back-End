@@ -22,7 +22,7 @@ public class Diet {
     private Set<Meal> meals;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id",nullable = false)
+    @JoinColumn(name = "user_id")//nullable = false)
     private AppUser user;
 
     public Diet() {

@@ -115,9 +115,19 @@ public class  UserController {
 
    // }
 
+    @GetMapping(path ="users/{id}/measurements")
+    public  Iterable<Measurement> getUserMeasurements (@PathVariable Integer id) {
+
+        AppUser user = userService.findById(id);
+
+        return user.getMeasurements();
+    }
+
+
     @GetMapping(path = "users/{id}/diets")
     public  Iterable<Food> getUserDiet (@PathVariable Integer id) {
         AppUser user = userService.findById(id);
+
 
          Set<Meal> meals = user.getDiet().getMeals();
 

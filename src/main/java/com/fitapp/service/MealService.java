@@ -65,25 +65,25 @@ public class MealService {
                 case "meal1":
 
                     mealCalories = (int) (user.getCalories() * 0.30);
-                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.30);
+                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.25);
                     break;
 
                 case "meal2":
 
-                    mealCalories = (int) (user.getCalories() * 0.30);
-                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.30);
+                    mealCalories = (int) (user.getCalories() * 0.35);
+                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.25);
                     break;
 
                 case "meal3":
 
                     mealCalories = (int) (user.getCalories() * 0.20);
-                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.20);
+                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.25);
                     break;
 
                 case "meal4":
 
-                    mealCalories = (int) (user.getCalories() * 0.20);
-                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.20);
+                    mealCalories = (int) (user.getCalories() * 0.15);
+                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.25);
                     break;
             }
 
@@ -94,7 +94,7 @@ public class MealService {
                 case "meal1":
 
                     mealCalories = (int) (user.getCalories() * 0.25);
-                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.25);
+                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.20);
                     break;
 
                 case "meal2":
@@ -106,19 +106,19 @@ public class MealService {
                 case "meal3":
 
                     mealCalories = (int) (user.getCalories() * 0.25);
-                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.25);
+                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.20);
                     break;
 
                 case "meal4":
 
                     mealCalories = (int) (user.getCalories() * 0.15);
-                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.15);
+                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.20);
                     break;
 
                 case "meal5":
 
                     mealCalories = (int) (user.getCalories() * 0.15);
-                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.15);
+                    proteinsCals = (int) (user.getWeight() * 1.8 * 4 * 0.20);
                     break;
             }
         }

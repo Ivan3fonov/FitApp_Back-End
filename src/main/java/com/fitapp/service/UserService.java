@@ -45,7 +45,7 @@ public class UserService {
        userRepository.deleteAll();
    }
 
-   public AppUser addUserMeasurements(Measurement measurement, int id){
+   public Measurement addUserMeasurements(Measurement measurement, int id){
 
 
        AppUser user = userRepository.findOne(id);
@@ -56,7 +56,7 @@ public class UserService {
 
        userRepository.save(user);
 
-       return user;
+       return measurement;
 
 
 

@@ -1,5 +1,7 @@
 package com.fitapp.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -9,7 +11,7 @@ public class Measurement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
     private float weight;
     private float chest;
@@ -21,6 +23,7 @@ public class Measurement {
 
     private Date createdAt;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private AppUser user;
@@ -102,11 +105,11 @@ public class Measurement {
         this.createdAt = createdAt;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }
